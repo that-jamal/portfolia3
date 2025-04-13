@@ -5,8 +5,12 @@ import FeaturedProjects from '@/components/FeaturedProjects';
 import AgeDisplay from '../components/AgeDisplay';
 
 interface Repo {
+  id: number;
+  name: string;
+  description: string;
   stargazers_count: number;
-  [key: string]: any;
+  forks_count: number;
+  html_url: string;
 }
 
 
@@ -39,7 +43,7 @@ export default function Home() {
     <main className=" min-h-screen bg-gray-100 bg-gradient-to-r from-[rgb(114,30,56)] via-[rgb(0,0,0)] to-[rgb(15,55,63)] h-full">
 
       <div className={scrolled ? "  transition-all duration-500  h-80" : " transition-all duration-500 left-0 top-0 w-full h-screen"}></div>
-      <div style={{ fontFamily: '"Courier New", monospace' }} className="bg-gray-100 p-8 bg-gradient-to-r from-[rgb(250,250,250)]  to-[rgb(114,30,56)] shadow-lg p-5 rounded-xl w-full">
+      <div style={{ fontFamily: '"Courier New", monospace' }} className="bg-gray-100 p-8 bg-gradient-to-r from-[rgb(250,250,250)]  to-[rgb(114,30,56)] shadow-lg rounded-xl w-full">
         <h1 className="text-4xl font-bold mb-4">About Me</h1>
         <p className="text-xl mb-2">
           Hi, Im jamil varg a fin/swe <AgeDisplay /> yr old programmer.
@@ -83,7 +87,7 @@ export default function Home() {
         <h1 className="text-white text-4xl font-bold text-center mb-10">that-jamals GitHub Repositories</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {repos.map(repo => (
-            <div key={repo.id} className="bg-gray-100 p-8 bg-gradient-to-r from-[rgb(250,250,250)]  to-[rgb(15,55,63)] shadow-lg p-5 rounded-xl">
+            <div key={repo.id} className="bg-gray-100 p-8 bg-gradient-to-r from-[rgb(250,250,250)]  to-[rgb(15,55,63)] shadow-lg rounded-xl">
               <h2 className="text-xl font-semibold">{repo.name}</h2>
               <p className="text-gray-600 mb-2">{repo.description || "No description"}</p>
               <div className=" text-sm text-gray-500 mb-2">
@@ -97,6 +101,7 @@ export default function Home() {
               >
                 View on GitHub →
               </a>
+
             </div>
           ))}
         </div>
