@@ -35,7 +35,7 @@ export default function Home() {
       <div style={{ fontFamily: '"Courier New", monospace' }} className="bg-gray-100 p-8 bg-gradient-to-r from-[rgb(250,250,250)]  to-[rgb(114,30,56)] shadow-lg p-5 rounded-xl w-full">
         <h1 className="text-4xl font-bold mb-4">About Me</h1>
         <p className="text-xl mb-2">
-          Hi, I'm jamil varg a fin/swe <AgeDisplay /> yr old programmer.
+          Hi, Im jamil varg a fin/swe <AgeDisplay /> yr old programmer.
         </p>
         <p className="mb-4">
           I have studied at <strong>Optima Program Utvekling</strong> for 3 years where I deepened my knowledge in programming fundamentals, software development, and modern web technologies.
@@ -73,7 +73,7 @@ export default function Home() {
         <FeaturedProjects />
       </section>
       <section id="github-repos" className="mt-10">
-        <h1 className="text-white text-4xl font-bold text-center mb-10">that-jamal's GitHub Repositories</h1>
+        <h1 className="text-white text-4xl font-bold text-center mb-10">that-jamals GitHub Repositories</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {repos.map(repo => (
             <div key={repo.id} className="bg-gray-100 p-8 bg-gradient-to-r from-[rgb(250,250,250)]  to-[rgb(15,55,63)] shadow-lg p-5 rounded-xl">
