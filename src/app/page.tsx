@@ -43,7 +43,7 @@ export default function Home() {
 
         {/* Background and Interests */}
         <p className="mb-4">
-          Ever since I was young, I've shared a deep interest in computers and programming. I started tinkering with code at an early age, and that curiosity grew into a full-blown passion. I enjoy exploring new technologies, building fun projects, and learning about the latest advancements in software and artificial intelligence.
+          Ever since I was young, I have shared a deep interest in computers and programming. I started tinkering with code at an early age, and that curiosity grew into a full-blown passion. I enjoy exploring new technologies, building fun projects, and learning about the latest advancements in software and artificial intelligence.
         </p>
 
         with machine learning algorithms or diving into deep learning frameworks, I love applying creative solutions to real-world problems.        {/* Passion for AI and Technology */}
