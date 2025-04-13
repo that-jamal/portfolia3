@@ -4,14 +4,21 @@ import Navbar from '@/components/Navbar';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import AgeDisplay from '../components/AgeDisplay';
 
+interface Repo {
+  stargazers_count: number;
+  [key: string]: any;
+}
+
+
+
 export default function Home() {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     fetch('https://api.github.com/users/that-jamal/repos')
       .then(res => res.json())
-      .then(data => {
+      .then((data: Repo[]) => {
         const sorted = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         setRepos(sorted);
       });
